@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class MyLinkedList<K> {
-	public static INode head;
-	public static INode tail;
+	public INode<K> head;
+	public INode<K> tail;
 
 	public MyLinkedList() {
 		this.head = null;
@@ -123,7 +123,7 @@ public class MyLinkedList<K> {
 		tempNode1.setNext(LastNode);
 		return this.head;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "MyLinkedListNodes{" + head + '}';
