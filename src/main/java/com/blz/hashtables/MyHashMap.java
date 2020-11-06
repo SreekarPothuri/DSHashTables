@@ -1,9 +1,9 @@
 package com.blz.hashtables;
 
 public class MyHashMap<K, V> {
-	
+
 	MyLinkedList<K> myLinkedList;
-	
+
 	public MyHashMap() {
 		this.myLinkedList = new MyLinkedList<>();
 	}
@@ -15,14 +15,14 @@ public class MyHashMap<K, V> {
 
 	public void add(K key, V value) {
 		MyMapNode<K, V> myMapNode = (MyMapNode<K, V>) this.myLinkedList.search(key);
-		if(myMapNode == null) {
+		if (myMapNode == null) {
 			myMapNode = new MyMapNode<>(key, value);
 			this.myLinkedList.append(myMapNode);
-		}else {
+		} else {
 			myMapNode.setValue(value);
 		}
-	}	
-	
+	}
+
 	@Override
 	public String toString() {
 		return "MyHashMapNodes{" + myLinkedList + '}';
